@@ -12,8 +12,8 @@ import { TriviaGame } from '../models/triviaGame.model';
 })
 export class TriviaDBService {
 
-  TRIVIA_URL = `${environment.TRIVIA_URL}`;
-  CATEGORY_URL = `${environment.CATEGORY_URL}`;
+  TRIVIA_URL = 'https://opentdb.com/api.php?amount=8&difficulty=easy&type=multiple&encode=base64';
+  CATEGORY_URL = "https://opentdb.com/api_category.php"
   resQst: Quiz[];
   result: number;
   currentGame: TriviaGame;

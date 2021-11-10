@@ -4,9 +4,6 @@
 
 export const environment = {
   production: false,
-  apiUser: 'https://randomuser.me/api/?inc=login&seed=blabla',
-  TRIVIA_URL : 'https://opentdb.com/api.php?amount=8&difficulty=easy&type=multiple&encode=base64',
-  CATEGORY_URL :"https://opentdb.com/api_category.php",
 };
 
 /*

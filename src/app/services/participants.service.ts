@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ParticipantsService  {
 
-  apiUser = `${environment.apiUser}`;
+  apiUser = 'https://randomuser.me/api/?inc=login&seed=blabla';
   constructor(
    private http : HttpClient,
    private route: Router
