@@ -11,6 +11,6 @@ export const appRoute :Routes = [
   { path: 'quiz', component: QuizChoiceComponent, canActivate:[AuthGuard]},
   { path: 'quiz/:id', component: QuizComponent, canActivate: [AuthGuard]},
   { path: 'result', component: ResultComponent, canActivate: [AuthGuard]},
-  { path:'', redirectTo:'/signup', pathMatch:'full'},
+  { path:'', redirectTo:'/login', pathMatch:'full'},
   { path: '**', component: NotFoundComponent}
 ];
