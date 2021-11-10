@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUser: 'https://randomuser.me/api/?inc=login&seed=blabla',
+  TRIVIA_URL : 'https://opentdb.com/api.php?amount=8&difficulty=easy&type=multiple&encode=base64',
+  CATEGORY_URL :"https://opentdb.com/api_category.php",
 };
 
 /*
