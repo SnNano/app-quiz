@@ -18,7 +18,10 @@ export class QuizChoiceComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getAllChoices();
+    setTimeout(()=>{
+      this.getAllChoices();
+  }, 2000);
+
   }
   getAllChoices()
   {

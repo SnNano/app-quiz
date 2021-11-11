@@ -13,8 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthGuard } from './authentification/auth/auth.guard';
 import { QuizChoiceComponent } from './front/quiz-choice/quiz-choice.component';
 import { HeaderComponent } from './front/layouts/header/header.component';
-import { FooterComponent } from './front/layouts/footer/footer.component';
 import { NotFoundComponent } from './front/not-found/not-found.component';
+import { SpinnerComponent } from './front/layouts/spinner/spinner.component';
 
 
 
@@ -27,8 +27,8 @@ import { NotFoundComponent } from './front/not-found/not-found.component';
     ResultComponent,
     QuizChoiceComponent,
     HeaderComponent,
-    FooterComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

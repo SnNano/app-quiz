@@ -1,28 +1,15 @@
-.row {
-  margin-right: 0 !important;
-}
-.title-top{
-  margin-top: 8vw;
-}
-h1{
-  font-size: 70px !important;
-}
-button{
-  border-radius: 10em;
-}
 .lds-dual-ring {
-  width: 80px;
-  height: 80px;
+  width: 180px;
+  height: 180px;
   position: fixed;
-  top: 50%;
-  right: 50%;
+  margin-left:43vw;
 }
 .lds-dual-ring:after {
   content: " ";
   display: block;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
+  width: 164px;
+  height: 164px;
+  margin: 18px;
   border-radius: 50%;
   border: 6px solid #fff;
   border-color: #4285f4 transparent #4285f4 transparent;

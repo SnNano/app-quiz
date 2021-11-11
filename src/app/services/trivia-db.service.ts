@@ -28,15 +28,10 @@ export class TriviaDBService {
   startNewGame(categoryId: number) {
 
     this.getQuestions(categoryId).subscribe((res) => {
-
       this.currentGame = new TriviaGame(res);
       this.router.navigate(['/quiz/'+categoryId], {relativeTo: this.route});
-
-      //this.currentGame.gameOver$.subscribe(() => this.router.navigate(['/game-over'], {relativeTo: this.route}));
     });
   }
-
-
 
   getCategories(): Observable<TriviaCategory[]> {
 

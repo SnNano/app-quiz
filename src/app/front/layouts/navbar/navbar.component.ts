@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -8,15 +7,20 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
+  show:boolean=false;
   constructor(
-
-    private router: Router
   ) { }
 
   ngOnInit(): void {
+    if(localStorage.length>0){
+      this.show=true;
+    }
+    else{
+      this.show=false;
+    }
   }
    onLogOut(){
     localStorage.clear();
-    this.router.navigate(['/login']);
+    window.location.reload();
    }
 }

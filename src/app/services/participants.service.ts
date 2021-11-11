@@ -1,8 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import { catchError, map } from 'rxjs/operators';
-import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -12,8 +10,7 @@ export class ParticipantsService  {
 
   apiUser = 'https://randomuser.me/api/?inc=login&seed=blabla';
   constructor(
-   private http : HttpClient,
-   private route: Router
+   private http : HttpClient
     ) {
   }
 

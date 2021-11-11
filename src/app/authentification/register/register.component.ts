@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ValidatorFn, ValidationErrors, AbstractControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ParticipantsService } from 'src/app/services/participants.service';
-//import { ParticipantsService } from '../../services/participants.service';
 
 @Component({
   selector: 'app-register',
@@ -21,7 +20,6 @@ export class RegisterComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-
       this.SignUpForm = this.fb.group ({
        username: ['', [
          Validators.required,
@@ -32,7 +30,13 @@ export class RegisterComponent implements OnInit {
        password:['', [
          Validators.required
                ]]
-     })
+     });
+     if(localStorage.length>0){
+      this.route.navigate(['/quiz']);
+     }
+     else{
+      this.route.navigate(['/login']);
+     }
   }
    get forms(){ return this.SignUpForm.controls; }
      forbiddenNameValidator(nameRe: RegExp): ValidatorFn {
@@ -48,7 +52,7 @@ export class RegisterComponent implements OnInit {
         if(data.username==res2.login.username && data.password==res2.login.password){
           localStorage.clear();
           localStorage.setItem('Participants', JSON.stringify(res));
-          this.route.navigate(['/quiz']);
+          window.location.reload();
         }
         else{
           this.errorInfo ="This user does not exist"
